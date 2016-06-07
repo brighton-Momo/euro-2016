@@ -17,9 +17,5 @@ WORKDIR /euro-2016
 # Install npm dependencies
 RUN npm install
 
-# Set env variables
-RUN ./set-env.sh
-
 EXPOSE 3000
-
-CMD ["node","server.js"];
+CMD . set-env.sh && node server.js
