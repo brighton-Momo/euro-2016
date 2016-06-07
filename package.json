@@ -1,0 +1,18 @@
+{
+  "name": "euro-2016",
+  "version": "1.0.0",
+  "description": "Get Euro 2016 tweets",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "twit": "^2.2.4"
+  }
+}

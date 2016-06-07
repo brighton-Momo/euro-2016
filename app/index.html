@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="euroApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Euro 2016 Tweets</title>
+    <link rel="stylesheet" href="assets\fonts\roboto.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="lib\bootstrap-css\css\bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="assets\css\default.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body class="container custom-container" ng-controller="MainCtrl">
+    <div class="row logo">
+      <div class="col-md-12">
+        <div class="text-center"><img src="assets/images/logo.png"></div>
+      </div>
+    </div>
+    <div class="row languages">
+      <div class="col-md-2" ng-repeat="lang in languages">
+        <a ng-click="translate(lang.flag)" class="text-center">
+          <img src="assets/images/flags/{{lang.flag}}.png"/>
+          <span class="language">{{lang.name}}</span>
+        <a/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 tweet" ng-repeat="tweet in tweets">
+        <div class="col-md-1">
+          <img ng-src="{{tweet.user.profile_image_url}}"/>
+        </div>
+        <div class="col-md-11">
+          <div class="tweet-fullname"><a href="http://www.twitter.com/{{tweet.user.screen_name}}">{{tweet.user.name}}</a><span class="tweet-username">@{{tweet.user.screen_name}}</span></div>
+          <time-ago class="tweet-timestamp" from-time='{{ tweet.created_at }}'></time-ago><br/>
+          <p class="tweet-content">{{tweet.retweeted_status.text}}</p>
+          <img width="30%" ng-src="{{tweet.entities.media[0].media_url}}">
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="lib\angular\angular.min.js" charset="utf-8"></script>
+  <script src="lib\angular-timeago\dist\angular-timeago.js" charset="utf-8"></script>
+  <script src="lib\lodash\dist\lodash.js" charset="utf-8"></script>
+  <script src="lib\restangular\dist\restangular.min.js" charset="utf-8"></script>
+  <script src="scripts\services\services.module.js" charset="utf-8"></script>
+  <script src="scripts\services\twitter.js" charset="utf-8"></script>
+  <script src="scripts\app.js" charset="utf-8"></script>
+</html>

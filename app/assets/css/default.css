@@ -1,0 +1,46 @@
+html,body{
+  font-family: Roboto, sans-serif;
+}
+
+.custom-container{
+  margin-top:20px;
+}
+
+.tweet{
+  margin-bottom: 20px;
+}
+
+.tweet-username{
+  font-weight: normal;
+  font-style: italic;
+  margin-left: 6px;
+}
+
+.tweet-fullname a{
+  text-decoration: none;
+  font-weight: bolder;
+  color: #000000;
+}
+
+.tweet-timestamp{
+  font-style: italic;
+}
+
+.tweet-content{
+  margin-top: 10px;
+}
+
+.languages{
+  margin-bottom: 20px;
+}
+
+.language{
+  text-decoration: none;
+  color: #55ACEE;
+  font-weight: bolder;
+  margin-left: 5px;
+}
+
+.logo{
+  margin-bottom: 10px;
+}
