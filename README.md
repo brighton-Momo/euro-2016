@@ -4,6 +4,23 @@ Streaming Euro 2016 tweets
 
 ## Quickstart
 
+1 - Without Docker 
+
+```sh
+$ bower install && npm install
+$ . set-env.sh
+$ npm start
+```
+
+2 - With docker
+
+```sh
+$ docker build -t mlabouardy/euro:2016 .
+$ docker run -d -p 3000:3000 mlabouardy/euro:2016
+```
+
+Open your browser and go to http://IP:3000
+
 ## Help
 
 If you run into issues, please don't hesitate to find help on the GitHub project.
